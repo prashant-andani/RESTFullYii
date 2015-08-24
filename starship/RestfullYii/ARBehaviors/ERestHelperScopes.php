@@ -251,7 +251,7 @@ class ERestHelperScopes extends CActiveRecordBehavior
 				}
 			} else {
 				if ($cType == 'text' || $cType == 'string') {
-					$compare = " LIKE :" . $prop;
+					$compare = " ILIKE :" . $prop;
 					$params[(":" . $prop)] = '%' . $value . '%';
 				} else {
 					$compare = " = :" . $prop;
